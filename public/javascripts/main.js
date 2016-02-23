@@ -18,7 +18,7 @@ function applicantController ($scope, $http) {
 		console.log('This works', applicantID)
 		$http.post('/deleter', { applicantID : applicantID})
 			.then(function(returnData){
-				alert(returnData.data)
+				$scope.applicants = returnData.data
 			})
 	}
 };
