@@ -11,7 +11,16 @@
     <div class="container">
       <h1>Applicants</h1>
       <ul id="applications" class="list-unstyled">
-        <li>Applicants should go here.</li>
+        <li ng-repeat="applicant in applicants">
+          Description:  {{applicant.name}} </br> 
+          Description:  {{applicant.bio}} </br> 
+          Description:  {{applicant.skills}} </br> 
+          Description:  {{applicant.years}} </br> 
+          Description:  {{applicant.why}} </br>
+          <button ng-click="deleteByID(applicant._id)">
+            Delete This Fool
+          </button>
+        </li>
       </ul>
     </div>
 	  
