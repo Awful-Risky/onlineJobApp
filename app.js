@@ -27,6 +27,9 @@ app.get('/applicants', function(req, res){
 	res.sendFile('html/applicants.html', {root : './public'});
 });
 
+// Make call to the Delete
+app.post('/deleter', applicantCtrl.deleteApplicant);
+
 // Gets Applicants
 app.get('/getter', applicantCtrl.getApplicants);
 

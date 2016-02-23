@@ -14,15 +14,19 @@ function createApplicant (req, res){
 	})
 }
 
-
 function getApplicants (req, res){
 	Applicant.find({}, function(err, docs){
 		res.send(docs);
 	})
 }
 
+function deleteApplicant (req, res){
+	console.log(req.body.applicantID)
+	// Applicant.remove({id =req.body})
+}
 
 module.exports = {
 	createApplicant : createApplicant,
-	getApplicants   : getApplicants
+	getApplicants   : getApplicants,
+	deleteApplicant : deleteApplicant
 }
