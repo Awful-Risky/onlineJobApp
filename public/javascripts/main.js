@@ -17,5 +17,8 @@ function applicantController ($scope, $http) {
 	$scope.deleteByID = function  (applicantID) {
 		console.log('This works', applicantID)
 		$http.post('/deleter', { applicantID : applicantID})
+			.then(function(returnData){
+				alert(returnData.data)
+			})
 	}
 };

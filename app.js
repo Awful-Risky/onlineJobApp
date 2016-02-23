@@ -27,7 +27,7 @@ app.get('/applicants', function(req, res){
 	res.sendFile('html/applicants.html', {root : './public'});
 });
 
-// Make call to the Delete
+// Make call to server to Delete by ID
 app.post('/deleter', applicantCtrl.deleteApplicant);
 
 // Gets Applicants

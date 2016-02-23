@@ -21,8 +21,10 @@ function getApplicants (req, res){
 }
 
 function deleteApplicant (req, res){
-	console.log(req.body.applicantID)
-	// Applicant.remove({id =req.body})
+	console.log(req.body.applicantID);
+	Applicant.remove({_id : req.body.applicantID}, function(err, doc){
+		res.send('Applicant Deleted. Please Refresh')
+	})
 }
 
 module.exports = {
